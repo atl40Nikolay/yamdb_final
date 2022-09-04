@@ -10,7 +10,7 @@ services:
       - ./.env
 
   web:
-    build: ../api_yamdb
+    image: atl40/yamdb_final:latest
     restart: always
     volumes:
       # Контейнер web будет работать с данными, хранящиеся в томе static_value, 
