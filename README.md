@@ -1,6 +1,8 @@
 # Документация к API проекту YAMDB (v1.01)
 Проект YaMDb собирает отзывы пользователей на различные произведения.
 
+![yamdb_final workflow](https://github.com/atl40Nikolay/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+
 ## Оглавление
 0. [Описание](#описание)
 1. [Стек технологий](#стек-технологий)
