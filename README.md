@@ -75,16 +75,109 @@ GET-запросы
 /api/v1/titles/
 ```
 ```
+[
+  {
+    "count": 0,
+    "next": "string",
+    "previous": "string",
+    "results": [
+      {
+        "id": 0,
+        "name": "string",
+        "year": 0,
+        "rating": 0,
+        "description": "string",
+        "genre": [
+          {
+            "name": "string",
+            "slug": "string"
+          }
+        ],
+        "category": {
+          "name": "string",
+          "slug": "string"
+        }
+      }
+    ]
+  }
+]
+```
+```
 /api/v1/categories/
+```
+```
+[
+  {
+    "count": 0,
+    "next": "string",
+    "previous": "string",
+    "results": [
+      {
+        "name": "string",
+        "slug": "string"
+      }
+    ]
+  }
+]
 ```
 ```
 /api/v1/genres/
 ```
 ```
+[
+  {
+    "count": 0,
+    "next": "string",
+    "previous": "string",
+    "results": [
+      {
+        "name": "string",
+        "slug": "string"
+      }
+    ]
+  }
+]
+```
+```
 /api/v1/titles/{title_id}/reviews/
 ```
 ```
+[
+  {
+    "count": 0,
+    "next": "string",
+    "previous": "string",
+    "results": [
+      {
+        "id": 0,
+        "text": "string",
+        "author": "string",
+        "score": 1,
+        "pub_date": "2019-08-24T14:15:22Z"
+      }
+    ]
+  }
+]
+```
+```
 /api/v1/titles/{title_id}/reviews/{review_id}/comments/
+```
+```
+[
+  {
+    "count": 0,
+    "next": "string",
+    "previous": "string",
+    "results": [
+      {
+        "id": 0,
+        "text": "string",
+        "author": "string",
+        "pub_date": "2019-08-24T14:15:22Z"
+      }
+    ]
+  }
+]
 ```
 POST-запрос
 Добавить новый отзыв. Пользователь может оставить только один отзыв на произведение.
