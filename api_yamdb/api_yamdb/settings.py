@@ -1,11 +1,17 @@
 import os
 from datetime import timedelta
 
+from dotenv import load_dotenv
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SECRET_KEY = 'p&l%385148kslhtyn^##a1)ilz@4zqj=rq&agdol^##zgl9(vs'
-# Не умею как сделать правильно этот сикрет кей. Видел такое вот решение гдето в интернетах
-# если в .env вставлять строку то ругается, если не строку то тоже ругается...
+dotenv_file = os.path.join(os.path.dirname(BASE_DIR), 'infra', '.env')
+
+if os.path.isfile(dotenv_file):
+    load_dotenv(dotenv_file)
+
+SECRET_KEY = os.environ['SECRET_KEY']
+
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
@@ -124,7 +130,6 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-# STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static/'),)
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
