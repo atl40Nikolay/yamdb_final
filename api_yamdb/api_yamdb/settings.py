@@ -10,7 +10,9 @@ dotenv_file = os.path.join(os.path.dirname(BASE_DIR), 'infra', '.env')
 if os.path.isfile(dotenv_file):
     load_dotenv(dotenv_file)
 
-SECRET_KEY = os.environ['SECRET_KEY']
+# SECRET_KEY = os.environ['SECRET_KEY']
+
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 DEBUG = False
 
